@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<a class="navbar-brand" href="#">Сотрудники</a>
+
+	<form class="form-inline">
+      <input type="text" placeholder="Начните вводить фамилию..." class="form-control" id="search" ng-model="$root.search" ng-model-options="{ debounce: 200 }" autofocus> 
+	</form>
+
+	<a href="#!/addPerson" id="add_people" class="btn btn-success link_success btn-sm" role="button">
+		<i class="fas fa-user-plus"></i> Добавить сотрудника
+	</a>
+</nav>
+
+<div class="card people_card" data-ng-repeat="person in people | startsWith:search">
+   <div class="card-header">
+	   <h4 class="card-title text-body">{{person.last_name}} {{person.first_name}}</h4>
+	   <p class="card-text">{{person.position}}</p>
+   </div>
+   <div class="card-body">
+	    <p class="card-text"><span class="font-weight-bold">Email: </span>{{person.email}}</p>
+		<p class="card-text"><span class="font-weight-bold">Мобильный: </span>{{person.mobile}}</p>
+		<p class="card-text"><span class="font-weight-bold">Внутренний: </span>{{person.ext_tel}}</p>
+	
+		<a href="#!/seeProfile/{{person.ID}}" class="btn btn-success link_default btn-sm" role="button">
+			Подробнее
+		</a>
+		<a href="#!/editPerson/{{person.ID}}" class="btn btn-info link_default btn-sm" role="button">
+			Изменить
+		</a>
+		<a href="" data-ng-click="removePerson(person)" class="btn btn-danger link_default btn-sm" role="button" data-toggle="modal" data-target="#myModal">
+			Удалить
+		</a>
+	</div>
+</div>

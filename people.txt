@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="/it/SiteAssets/people_app/css/style.css" rel="stylesheet" type="text/css">
+		<script src="/it/SiteAssets/people_app/lib/jquery-3.3.1.min.js" type="text/javascript"></script>
+		
+		<!-- angular lib!-->
+		<script src="/it/SiteAssets/people_app/lib/angular.min.js" type="text/javascript"></script>
+		<script src="/it/SiteAssets/people_app/lib/angular-route.min.js" type="text/javascript"></script>
+		
+		<!-- bootstrap lib!-->
+		<link rel="stylesheet" href="/it/SiteAssets/people_app/lib/bootstrap-4.1.0/css/bootstrap.min.css">
+		<script src="/it/SiteAssets/people_app/lib/bootstrap-4.1.0/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="/it/SiteAssets/people_app/lib/popper.min.js" type="text/javascript"></script>
+		
+		<!-- font awesome lib!-->
+		<script defer src="/it/SiteAssets/people_app/lib/fontawesome-free-5.0.10/svg-with-js/js/fontawesome-all.js"></script>
+		
+		<!-- app !-->
+		<script src="/it/SiteAssets/people_app/js/app.js" type="text/javascript"></script>
+		<script src="/it/SiteAssets/people_app/js/services/baseSvc.js" type="text/javascript"></script>
+		<script src="/it/SiteAssets/people_app/js/services/custom_filters.js" type="text/javascript"></script>
+		<script src="/it/SiteAssets/people_app/js/services/people/people.js" type="text/javascript"></script>
+		<script src="/it/SiteAssets/people_app/js/controllers/people/all.js" type="text/javascript"></script>
+		<script src="/it/SiteAssets/people_app/js/controllers/people/add.js" type="text/javascript"></script>
+		<script src="/it/SiteAssets/people_app/js/controllers/people/edit.js" type="text/javascript"></script>
+		<script src="/it/SiteAssets/people_app/js/controllers/people/profile.js" type="text/javascript"></script>
+	</head>
+	
+	<body>
+		<div class="container-fluid">
+			<div data-ng-app="peopleApp">
+				<div data-ng-view class="people_app"></div>
+			</div>
+		</div>
+	</body>
+</html>

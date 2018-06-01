@@ -1,0 +1,19 @@
+a.link_default:visited {
+	color:white;
+}
+
+a.link_success:visited {
+	color:white;
+}
+
+a#add_people {
+	margin: 5px;
+}
+
+#search {
+	width: 350px;
+}
+
+.people_card {
+	margin-top: 20px;
+}
